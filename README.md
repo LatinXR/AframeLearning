@@ -6,6 +6,7 @@ Software:
 - [Github Desktop](https://desktop.github.com/) (opcional para personas con poca experiencia usando Terminal)
 
 Recursos:
+- Documentación en [AFrame.io](https://aframe.io/docs/1.4.0/introduction/)
 - Youtube de [clarecreate](https://www.youtube.com/@clarecreate)
 - Udemy Course de [Danilo Pasquariello](https://www.udemy.com/course/learn-a-frame-and-get-ready-for-webvr/)
 - [Github](https://github.com/git-guides/git-init)
