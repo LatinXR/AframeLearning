@@ -2,41 +2,83 @@
 
 <html>
 
-    <head>
+<head>
     <title>AFrame Test Project</title>
 
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- <script src="/scripts/animations.js"></script> -->
 </head>
 
 <body>
-    
-<!--    Usa las teclas WASD o las flechas para moverte en la escena.-->
-    <a-scene>
-        
-<!--        Para rotacion, podemos usar la tenica que se usa en matemáticas con la mano y el pulgar para saber como distinguir donde esta x y z en la rotacion.-->
-        
-        <a-box position="0 2.6 -3" rotation="0 45 0" color="#800" scale="0.5 0.5 0.5"></a-box>
-        
-        <a-box position="0 0.6 -3" rotation="0 30 0" color="#4CC3D9" width='2' height='0.5'></a-box>
-        
-        <!--Una distancia de -4 en la direccion x o z es ideal para poner objetos en una buen nivel de vision
+
+    <!--    Usa las teclas WASD o las flechas para moverte en la escena.-->
+    <!--    Stats te indica información sobre tu proyecto, incluido fps y memoria. Ponlo en true para ver-->
+    <!--    vr-mode-ui="true" ar-mode-ui="true" muestran el boton para darle modo vr o modo ar en el dispositivo de la experiencia-->
+    <a-scene stats="false" vr-mode-ui="true" ar-mode-ui="true">
+
+        <!--    Poner tus assets aqui te puede ayudar a ordenar el projecto
+
+        Dales un ID para que puedas identificarlos facilmente -->
+        <a-assets>
+            <img id="casa_ver1" src="images/house1.png" />
+            <img id="casa_ver2" src="images/house2.png" />
+        </a-assets>
+
+        <!--     Para rotacion, podemos usar la tenica que se usa en matemáticas con la mano y el pulgar para saber como distinguir donde esta x y z en la rotacion.-->
+
+        <!--     Animation puede cambiar cualquier atributo incluido color, rotacion y posicion etc. Para poner varias animaciones, usa animacon__nombre y haz los cambios necesario. Tienen que ser __ o no funcionará
+
+        Example:
+        animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; loop: true"
+                animation__color="property: color; to: #008; dur: 5000; easing: linear; loop: true"
+        -->
+
+        <a-box id="cuboRojo" position="0 1.5 -3" rotation="0 0 0" color="#800" scale="0.5 0.5 0.5">
+        </a-box>
+
+
+        <a-box position="0 0.25 -3" rotation="0 30 0" color="#4CC3D9" width='2' height='0.5' animation="property: color; to: #800; dur: 5000; easing: linear; loop: true"></a-box>
+
+        <a-image src="#casa_ver1" position="0 2 -5" scale="4 4 4"></a-image>
+
+        <a-image src="#casa_ver2" position="6 2 " rotation="0 90 0" scale="4 4 4"></a-image>
+
+        <!--    Una distancia de -4 en la direccion x o z es ideal para poner objetos en una buen nivel de vision
         Para que algo este en el nivel de vista del ojo humano desde el inicio, la altura (y) en position seria 0.6
         -->
-        
+
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-plane position="0 0 4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-plane position="4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-plane position="-4 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        
-        
-        <!-- Ojo con el orden en que se escriben las cosas: lo que va primero esta en la capa superior de la renderizacion. En otras palabras, si pongo el sky al principio, no voy a poder ver lo demás porque estaria en el layer debajo del cielo.
+
+        <!--    Para tu camera, es ideal poner 1.6 ya que 1.6 metros es la approximada vista general de los seres humanos. Estamos acostumbrados a ver las cosas desde esa altura.-->
+        <a-camera position="0 1.6 0"></a-camera>
+
+
+        <!--    Ojo con el orden en que se escriben las cosas: lo que va primero esta en la capa superior de la renderizacion. En otras palabras, si pongo el sky al principio, no voy a poder ver lo demás porque estaria en el layer debajo del cielo.
 
         Para demonstrar esto, pon el cielo antes. En fisico, puedes demonstrar con un papel (el cielo) y una moneda. Tambien puedes poner dos cajas en la misma posicion y ver cual es el color que se mira, esa seria la caja en la capa superior. 
-
+        
+        Lol, creo que el orden no importa. Ocupo experimentar más. 
 
         -->
         <a-sky color="#BBF3F5"></a-sky>
-        
+
     </a-scene>
-    
-</body></html>
+
+    <!-- Tried this script in the animation.js and it did not work but it does work when written in the script tags with the html -->
+    <script>
+        let rotationY = 0;
+
+        const cuboRojo = document.getElementById("cuboRojo");
+
+        const intervalo = setInterval(() => {
+            rotationY++;
+            cuboRojo.setAttribute("rotation", `0 ${rotationY} 0`);
+        }, 10);
+    </script>
+
+</body>
+
+</html>
