@@ -11,3 +11,6 @@ Recursos:
 - Udemy Course de [Danilo Pasquariello](https://www.udemy.com/course/learn-a-frame-and-get-ready-for-webvr/)
 - [Github](https://github.com/git-guides/git-init)
   - [FreeCodeCamp](https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/) (en español)
+  
+  
+Notas del tutorial se pueden encontrar en los comentarios
