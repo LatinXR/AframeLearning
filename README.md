@@ -7,11 +7,15 @@ Software:
 
 Recursos:
 - Documentación de [AFrame.io](https://aframe.io/docs/1.4.0/introduction/)
+- [AR.js](https://ar-js-org.github.io/AR.js-Docs/)
+- [WebXR](https://www.w3.org/TR/webxr/)
 - Youtube
     - [clarecreate](https://www.youtube.com/@clarecreate) (en inglés)
     - [CFBCursos](https://www.youtube.com/watch?v=5nnaLDpGSzQ) (em português)
 - Udemy Course de [Danilo Pasquariello](https://www.udemy.com/course/learn-a-frame-and-get-ready-for-webvr/)
+- Para refrescar [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 - [Github](https://github.com/git-guides/git-init)
   - [FreeCodeCamp](https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/) (en español)
+
   
 Notas del tutorial se pueden encontrar en los comentarios
