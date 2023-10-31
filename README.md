@@ -7,6 +7,7 @@ Software:
 
 Recursos:
 - Documentación de [AFrame.io](https://aframe.io/docs/1.4.0/introduction/)
+- [A-Frame Extras](https://github.com/c-frame/aframe-extras)
 - [AR.js](https://ar-js-org.github.io/AR.js-Docs/) (como referencia)
 - [WebXR](https://www.w3.org/TR/webxr/) (como referencia)
 - Youtube
