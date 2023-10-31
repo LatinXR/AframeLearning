@@ -14,7 +14,7 @@
     <!--    Usa las teclas WASD o las flechas para moverte en la escena.-->
     <!--    Stats te indica información sobre tu proyecto, incluido fps y memoria. Ponlo en true para ver-->
     <!--    vr-mode-ui="true" ar-mode-ui="true" muestran el boton para darle modo vr o modo ar en el dispositivo de la experiencia-->
-    <a-scene stats="false" vr-mode-ui="enabled: true" ar-mode-ui="enabled: false">
+    <a-scene stats="false" vr-mode-ui="enabled: true" ar-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: cyan">
 
         <!--    Poner tus assets aqui te puede ayudar a ordenar el projecto
 
@@ -22,6 +22,7 @@
         <a-assets>
             <img id="casa_ver1" src="images/house1.png" />
             <img id="casa_ver2" src="images/house2.png" />
+            <video id="my-video" preload="auto" src="videos/aesthetic.mp4" autoplay="true" loop="true"></video>
         </a-assets>
 
         <!--     Para rotacion, podemos usar la tenica que se usa en matemáticas con la mano y el pulgar para saber como distinguir donde esta x y z en la rotacion.-->
@@ -38,10 +39,23 @@
 
         <!--     Ejemplo de como usar animation-->
         <a-box position="0 0.25 -3" rotation="0 30 0" color="#4CC3D9" width='2' height='0.5' animation="property: color; to: #800; dur: 5000; easing: linear; loop: true; dir: alternate"></a-box>
+        
+        <!--     tried  wasd-controls="acceleration:50-->
+        <a-cylinder position="-4 .5 0" scale=".5 1 .5" material="roughness: 0; metalness: 1"></a-cylinder>
 
         <a-image src="#casa_ver1" position="0 2 -5" scale="4 4 4"></a-image>
 
         <a-image src="#casa_ver2" position="6 2 " rotation="0 90 0" scale="4 4 4"></a-image>
+        
+        
+        <a-entity position="-4 0.5 1.5" geometry="primitive:box" material="shader:standard; color:#880; emissive: #808; emissiveIntensity:0.8"></a-entity>
+        
+        
+        <!--   video example-->
+        <a-entity position="-6 2.5 0" scale="1 5 7" geometry="primitive:box" material="src: #my-video; emissive: #fff; emissiveIntensity:0.3" ></a-entity>
+        
+        
+        
 
         <!--    Una distancia de -4 en la direccion x o z es ideal para poner objetos en una buen nivel de vision
         Para que algo este en el nivel de vista del ojo humano desde el inicio, la altura (y) en position seria 0.6
@@ -67,7 +81,6 @@
 
     </a-scene>
 
-    <!-- Tried this script in the animation.js and it did not work but it does work when written in the script tags with the html -->
     <!-- <script>
         let rotationY = 0;
 
@@ -79,6 +92,8 @@
         }, 10);
     </script> -->
 
+    
+    <!--    los scripts que hagamos siempre debe cargarse después del contenido; de lo contrario, el script no encontrará los objetos ya que el HTML aún no los ha creado-->
     <script src="scripts/animations.js"></script>
 
 </body>
