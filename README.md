@@ -7,8 +7,8 @@ Software:
 
 Recursos:
 - Documentación de [AFrame.io](https://aframe.io/docs/1.4.0/introduction/)
-- [AR.js](https://ar-js-org.github.io/AR.js-Docs/)
-- [WebXR](https://www.w3.org/TR/webxr/)
+- [AR.js](https://ar-js-org.github.io/AR.js-Docs/) (como referencia)
+- [WebXR](https://www.w3.org/TR/webxr/) (como referencia)
 - Youtube
     - [clarecreate](https://www.youtube.com/@clarecreate) (en inglés)
     - [CFBCursos](https://www.youtube.com/watch?v=5nnaLDpGSzQ) (em português)
@@ -18,4 +18,4 @@ Recursos:
   - [FreeCodeCamp](https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/) (en español)
 
   
-Notas del tutorial se pueden encontrar en los comentarios
+Notas del tutorial se pueden encontrar en los comentarios del codigo/markdown. 
