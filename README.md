@@ -9,6 +9,7 @@ Recursos:
 - Documentación de [AFrame.io](https://aframe.io/docs/1.4.0/introduction/)
 - [A-Frame Extras](https://github.com/c-frame/aframe-extras)
 - [AR.js](https://ar-js-org.github.io/AR.js-Docs/) (como referencia)
+- [Realidad Aumentada con Objetos 3D](https://emiliusvgs.com/realidad-aumentada-con-objetos-3d-arjs-aframe/)
 - [WebXR](https://www.w3.org/TR/webxr/) (como referencia)
 - Youtube
     - [clarecreate](https://www.youtube.com/@clarecreate) (en inglés)

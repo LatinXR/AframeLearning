@@ -6,7 +6,10 @@
     <title>AFrame Test Project</title>
 
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <!-- <script src="/scripts/animations.js"></script> -->
+    <!--    añadir Aframe-Extras-->
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
+
+
 </head>
 
 <body>
@@ -23,10 +26,13 @@
             <img id="casa_ver1" src="images/house1.png" />
             <img id="casa_ver2" src="images/house2.png" />
             <video id="my-video" preload="auto" src="videos/aesthetic.mp4" autoplay="true" loop="true"></video>
-            
+            <a-asset-item id="cats" response-type="arraybuffer" src="models/peach_and_goma_copy.gltf"></a-asset-item>
+
         </a-assets>
-        
-        
+
+        <a-entity gltf-model="#cats" scale="3 3 3" position="0 1.5 4" rotation="0 180 0" material="color:#FFC65D"></a-entity>
+
+
 
         <!--     Para rotacion, podemos usar la tenica que se usa en matemáticas con la mano y el pulgar para saber como distinguir donde esta x y z en la rotacion.-->
 
