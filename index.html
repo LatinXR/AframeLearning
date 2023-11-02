@@ -17,26 +17,41 @@
     <!--    Usa las teclas WASD o las flechas para moverte en la escena.-->
     <!--    Stats te indica información sobre tu proyecto, incluido fps y memoria. Ponlo en true para ver-->
     <!--    vr-mode-ui="true" ar-mode-ui="true" muestran el boton para darle modo vr o modo ar en el dispositivo de la experiencia-->
-    <a-scene stats="true" vr-mode-ui="enabled: true" ar-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: cyan">
+    <a-scene stats="false" vr-mode-ui="enabled: true" ar-mode-ui="enabled: false" loading-screen="dotsColor: red; backgroundColor: cyan">
 
         <!--    Poner tus assets aqui te puede ayudar a ordenar el projecto
 
         Dales un ID para que puedas identificarlos facilmente -->
         <a-assets>
-            
+            <!--    IMÁGENES    -->
             <img id="casa_ver1" src="images/house1.png" />
             <img id="casa_ver2" src="images/house2.png" />
+            <!--    Cielo-->
+            <img id="bosque" src="images/bosque.jpeg" />
+            <img id="espacio" src="images/universe_skybox.jpg" />
+
+            
+            
+<!--
+            VIDEO
+            
+            Palacing videos as assets does not work because videos are rendered in time in order to move. The assets preload which means that the video will appear stuck
+
+ -->
+            
             <video id="my-video" preload="auto" src="videos/aesthetic.mp4" autoplay="true" loop="true"></video>
+            
+            
+            <!--     MODELS  -->
+            
             <!--    <a-asset-item> invoca al three.js FileLoader
                 <a-asset-item> regresa el asset como plain text. Si queremos que regrese algo diferente, deifnimos el response-type como arraybuffer
             -->
             <a-asset-item id="cats" response-type="arraybuffer" src="models/peach_and_goma_copy.gltf"></a-asset-item>
-            <img id="bosque" src="images/bosque.jpeg"/>
-            <img id="espacio" src="images/universe_skybox.jpg" />
-
+            
         </a-assets>
 
-        <a-entity gltf-model="#cats" scale="3 3 3" position="0 1.5 4" rotation="0 180 0" material="color:#FFC65D"></a-entity>
+        <a-entity gltf-model="#cats" scale="1.5 1.5 1.5" position="4.5 .75 0" rotation="0 -90 0" material="src:#espacio"></a-entity>
 
 
 
@@ -56,7 +71,7 @@
         <a-box position="0 0.25 -3" rotation="0 30 0" color="#4CC3D9" width='2' height='0.5' animation="property: color; to: #800; dur: 5000; easing: linear; loop: true; dir: alternate"></a-box>
 
         <!--     tried  wasd-controls="acceleration:50-->
-        <a-cylinder src="images/universe_skybox.jpg" position="-4 .5 0" scale=".5 1 .5" ></a-cylinder>
+        <a-cylinder src="#espacio" position="-4 .5 0" scale=".5 1 .5"></a-cylinder>
 
         <a-image src="#casa_ver1" position="0 2 -5" scale="4 4 4"></a-image>
 
