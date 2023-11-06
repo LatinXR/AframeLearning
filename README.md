@@ -18,6 +18,7 @@ Recursos:
 - Para refrescar [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 - [Github](https://github.com/git-guides/git-init)
   - [FreeCodeCamp](https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/) (en español)
+ - [Blender](https://www.blender.org/) (diseño en 3D)
 
   
 Notas del tutorial se pueden encontrar en los comentarios del codigo/markdown. 
